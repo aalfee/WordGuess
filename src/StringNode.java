@@ -1,3 +1,4 @@
+package src;
 public class StringNode {
     String data;
     StringNode next;

@@ -1,47 +1,43 @@
-# Word Guessing Game Project
-## Overview
-This project implements a Word Guessing Game with a graphical user interface (GUI) using Java. The project includes classes such as `AppendClickListener`, `ListGUI`, `Main`, `StringList`, and `StringNode`.
+<h1>Word Guessing Game Project</h1>
 
-## Classes
-1. AppendClickListener
-* Implements `ActionListener` to handle button clicks in the GUI.
-* Includes logic for appending, prepending, providing word hints, letter hints, and making guesses.
-* Uses a `StringList` to manage and manipulate string data.
+    <p>This project implements a simple word guessing game with a graphical user interface (GUI) using Java Swing. The game allows users to guess a target word, receive hints, and keep track of their attempts.</p>
 
-2. ListGUI
-* Extends `JFrame` to create the GUI for the Word Guessing Game.
-* Includes buttons for appending, prepending, word hints, letter hints, and making guesses.
-* Uses an instance of `AppendClickListener` to handle button actions.
+    <h2>Classes</h2>
 
-3. Main
-* Main class to run the Word Guessing Game.
-* Initiates the GUI using the `ListGUI.initiateGUI()` method.
-  
-4. StringList
-* Represents a linked list of strings.
-* Includes methods for prepending, appending, counting strings with a specific length, counting word strings, counting letter strings, printing the list, and more.
+    <ul>
+        <li><strong>AppendClickListener:</strong> ActionListener for handling button clicks in the GUI.</li>
+        <li><strong>ListGUI:</strong> Main GUI class that initializes and displays the game interface.</li>
+        <li><strong>Main:</strong> Main class to start the application.</li>
+        <li><strong>StringList:</strong> Class representing a linked list of strings with various methods for manipulation.</li>
+        <li><strong>StringNode:</strong> Class representing a node in the linked list.</li>
+    </ul>
 
-5. StringNode
-* Represents a node in the linked list.
-* Contains data (a string) and a reference to the next node.
+    <h2>Features</h2>
 
-## How to Run
-To run the Word Guessing Game, execute the Main class. This will initiate the GUI, allowing users to interact with the game.
+    <ul>
+        <li>Append and prepend user input to a linked list of strings.</li>
+        <li>Provide hints for the guess word, including word and letter hints.</li>
+        <li>Allow users to make guesses and display results.</li>
+        <li>Change the guess word during the game.</li>
+        <li>Track and display previous attempts and hints.</li>
+        <li>Lose the game after a certain number of incorrect guesses.</li>
+    </ul>
 
-```sh
-java Main
-```
+    <h2>Usage</h2>
 
-## Game Instructions
-1. Append: Add a new string at the end of the list.
-2. Prepend: Add a new string at the beginning of the list.
-3. Word Hint: Count and display the number of words in the list matching a predefined word.
-4. Letter Hint: Count and display the number of letters in the list matching letters in a predefined word.
-5. Guess: Make a guess for a predefined word and check if it matches.
+    <ol>
+        <li>Compile and run the <code>Main.java</code> class to start the game.</li>
+        <li>Enter words in the provided text field and use the buttons to interact with the game.</li>
+        <li>Receive hints, make guesses, and change the guess word as needed.</li>
+        <li>View previous attempts and hints in the displayed text areas.</li>
+    </ol>
 
-## Screenshots
+    <h2>Notes</h2>
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+    <ul>
+        <li>The game includes a limit on the number of hints and guesses allowed.</li>
+        <li>The user can change the guess word and its meaning during the game.</li>
+        <li>The linked list (<code>StringList</code>) handles string manipulations and tracking previous attempts.</li>
+    </ul>
 
-## Dependencies
-No external dependencies are required to run the project.
+    <p>Feel free to customize and enhance the code for additional features or improvements!</p>

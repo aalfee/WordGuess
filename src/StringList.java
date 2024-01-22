@@ -1,3 +1,4 @@
+package src;
 import java.util.Arrays;
 
 public class StringList {
@@ -71,7 +72,9 @@ public class StringList {
         n = first.next;
         while(n!=null){
             for(int i = 0; i < n.data.length(); i++){
-                if(Character.toLowerCase(n.data.charAt(i)) == Character.toLowerCase(a)) {System.out.println(a);count++;}
+                if(Character.toLowerCase(n.data.charAt(i)) == Character.toLowerCase(a)) {
+                    ListGUI.hintTextArea.append(a+"");count++;
+                }
             }
             n = n.next; 
         }
