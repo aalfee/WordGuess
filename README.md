@@ -1,43 +1,48 @@
-<h1>Word Guessing Game Project</h1>
+# Word Guessing Game
 
-    <p>This project implements a simple word guessing game with a graphical user interface (GUI) using Java Swing. The game allows users to guess a target word, receive hints, and keep track of their attempts.</p>
+This project implements a Word Guessing Game using Java Swing. The game allows users to guess a target word, receive hints, and keep track of their attempts.
 
-    <h2>Classes</h2>
+## Project Structure
+The project consists of the following Java files:
 
-    <ul>
-        <li><strong>AppendClickListener:</strong> ActionListener for handling button clicks in the GUI.</li>
-        <li><strong>ListGUI:</strong> Main GUI class that initializes and displays the game interface.</li>
-        <li><strong>Main:</strong> Main class to start the application.</li>
-        <li><strong>StringList:</strong> Class representing a linked list of strings with various methods for manipulation.</li>
-        <li><strong>StringNode:</strong> Class representing a node in the linked list.</li>
-    </ul>
+* `AppendClickListener.java`: Handles button click events, appends user input to a StringList, provides hints, and manages game logic.
 
-    <h2>Features</h2>
+* `ListGUI.java`: Creates the graphical user interface (GUI) using Java Swing. Initializes the main frame and components for user interaction.
 
-    <ul>
-        <li>Append and prepend user input to a linked list of strings.</li>
-        <li>Provide hints for the guess word, including word and letter hints.</li>
-        <li>Allow users to make guesses and display results.</li>
-        <li>Change the guess word during the game.</li>
-        <li>Track and display previous attempts and hints.</li>
-        <li>Lose the game after a certain number of incorrect guesses.</li>
-    </ul>
+* `Main.java`: Contains the main method to initiate the GUI and run the Word Guessing Game.
 
-    <h2>Usage</h2>
+* `StringList.java`: Represents a linked list of strings. Provides methods for manipulating and analyzing the list, such as counting strings of a certain length or matching a specific word.
 
-    <ol>
-        <li>Compile and run the <code>Main.java</code> class to start the game.</li>
-        <li>Enter words in the provided text field and use the buttons to interact with the game.</li>
-        <li>Receive hints, make guesses, and change the guess word as needed.</li>
-        <li>View previous attempts and hints in the displayed text areas.</li>
-    </ol>
+* `StringNode.java`: Defines a node for the linked list, containing a string value and a reference to the next node.
 
-    <h2>Notes</h2>
+## How to Run
+- Open the project in your Java IDE.
+- Run the `Main` class, which initiates the GUI for the Word Guessing Game.
 
-    <ul>
-        <li>The game includes a limit on the number of hints and guesses allowed.</li>
-        <li>The user can change the guess word and its meaning during the game.</li>
-        <li>The linked list (<code>StringList</code>) handles string manipulations and tracking previous attempts.</li>
-    </ul>
+## Gameplay Instructions
+1. Enter a word (without spaces) in the text field.
+2. Use buttons like "Append," "Prepend," "Word Hint," "Letter Hint," and "Guess" to interact with the game.
+3. Receive hints and feedback on your attempts in the text area.
+4. You have a limited number of hints and guesses. Once exhausted, the game ends.
 
-    <p>Feel free to customize and enhance the code for additional features or improvements!</p>
+## Changing the Guess Word
+To change the target word, click the "Change Guess Word" button. Enter a new word and its meaning when prompted.
+
+## Screenshots
+
+![Alt text](/Screenshots/Screenshot1.png?raw=true "Screenshot1")
+![Alt text](/Screenshots/Screenshot2.png?raw=true "Screenshot2")
+![Alt text](/Screenshots/Screenshot3.png?raw=true "Screenshot3")
+![Alt text](/Screenshots/Screenshot4.png?raw=true "Screenshot4")
+![Alt text](/Screenshots/Screenshot5.png?raw=true "Screenshot5")
+
+## Note
++ The game uses a linked list (`StringList`) to store and manipulate user attempts.
++ The `AppendClickListener` class handles user interactions, appends input to the list, and provides hints.
+
+## Developers
+Alfiya Valitova
+alfiyav6@gmail.com
+
+## Acknowledgments
+This project uses Java Swing for the graphical user interface. Developed for educational purposes.
