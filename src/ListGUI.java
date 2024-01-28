@@ -21,7 +21,8 @@ public class ListGUI extends JFrame{
         JButton button3 = new JButton("Word Hint");
         JButton button4 = new JButton("Letter Hint");
         JButton button5 = new JButton("Guess");
-        JButton button6 = new JButton("Change Guess Word");
+        JButton button6 = new JButton("Change Timer");
+        JButton button7 = new JButton("Change Guess Word");
         TextArea textArea = new TextArea();
         textArea.setFont(new Font("Arial", Font.PLAIN, 20));; 
         hintTextArea.setFont(new Font("Arial", Font.PLAIN, 20));
@@ -36,6 +37,7 @@ public class ListGUI extends JFrame{
         panel2.add(button3);
         panel2.add(button4);
         panel2.add(button6);
+        panel2.add(button7);
         myContentPane.add(button5);
 
 
@@ -46,6 +48,7 @@ public class ListGUI extends JFrame{
         button4.addActionListener(acl);
         button5.addActionListener(acl);
         button6.addActionListener(acl);
+        button7.addActionListener(acl);
 
         GUI.setVisible(true);
         return GUI;

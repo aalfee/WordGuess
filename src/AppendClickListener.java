@@ -5,6 +5,7 @@ import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashSet;
+import java.util.InputMismatchException;
 import java.util.Set;
 
 public class AppendClickListener implements ActionListener{
@@ -14,9 +15,10 @@ public class AppendClickListener implements ActionListener{
     public StringList sl = new StringList();
     public static Boolean flag = true;
     private String word = "Love";               // Change the guess word here
-    private String wordMeaning = "";
+    private String wordMeaning = "What is ? Baby dont hurt me";
     public static int hintCount = 3;
     public static int guessCount = 3;
+    public static int countDown = 25;
     public AppendClickListener(JTextField textField, TextArea textArea, TextArea hintTextArea) {
         this.textField = textField;
         textArea1 = textArea;
@@ -27,7 +29,7 @@ public class AppendClickListener implements ActionListener{
 
 public void actionPerformed(ActionEvent event) {
         String buttonName = event.getActionCommand();
-        if((hintCount == 0)&& ((buttonName == "Letter Hint")||(buttonName == "Word Hint"))) { ListGUI.showNoMoreHintsMessage(); flag = false; }
+        if((hintCount == 0) && ((buttonName == "Letter Hint")||(buttonName == "Word Hint"))) { ListGUI.showNoMoreHintsMessage(); flag = false; }
 
 
     if(buttonName == "Append"){
@@ -68,7 +70,7 @@ public void actionPerformed(ActionEvent event) {
         if (sl != null) {
             // Your logic to append to StringList
             int answer = sl.countWordStrings(word);
-            textArea2.setText("Your previous attempt(s) had "+String.valueOf(answer)+" word(s) that match the length of the guess word");
+            textArea2.setText("Meaning: "+wordMeaning+"\nYour previous attempt(s) had "+String.valueOf(answer)+" word(s) that match the length of the guess word");
             hintCount--;
         } else {
             // Handle the case where sl is null
@@ -91,7 +93,7 @@ public void actionPerformed(ActionEvent event) {
 
                 String test = removeRepeatingCharacters(textArea2.getText());
 
-                textArea2.setText(test+"\n"+wordMeaning+"\n Your previous attempt(s) had "+answer+" letter(s) that match the guess word \n");
+                textArea2.setText(test+"\n Your previous attempt(s) had "+answer+" letter(s) that match the guess word \n");
                 hintCount--;
                 
                 // Handle the case where sl is null
@@ -122,6 +124,14 @@ public void actionPerformed(ActionEvent event) {
                     textArea1.append(" ");
             
                 }
+        } else if (buttonName == "Change Timer"){
+            String userInput = JOptionPane.showInputDialog("Change Timer to: ");
+            try {
+            countDown = Integer.parseInt(userInput);
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null,"Enter Integer Values Only");
+            }
+        
         } else if (buttonName == "Change Guess Word"){
             hintCount = 3;
             guessCount = 3;
@@ -130,6 +140,7 @@ public void actionPerformed(ActionEvent event) {
             word = userInput;
             userInput = JOptionPane.showInputDialog("Enter the new Guess Word meaning");
             wordMeaning = userInput;
+            TimerJFrame tjf2 = new TimerJFrame(10, 1000, 350);
         }
     }
 
