@@ -15,6 +15,8 @@ The project consists of the following Java files:
 
 * `StringNode.java`: Defines a node for the linked list, containing a string value and a reference to the next node.
 
+* 'TimerJFrame.java': Creates threads for a countdown from the start of the game, once the countdown is finished the game exits.
+
 ## How to Run
 - Open the project in your Java IDE.
 - Run the `Main` class, which initiates the GUI for the Word Guessing Game.
